@@ -1,0 +1,120 @@
+$kofi-default-color: #29abe0;
+
+@keyframes open {
+  from {
+    translate: 0 200%;
+    opacity: 0;
+  }
+  to {
+    translate: 0;
+    opacity: 1;
+  }
+}
+
+.donateBtn {
+  display: inline-block;
+  background-color: $kofi-default-color;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  font-weight: bold;
+
+  &:hover {
+    background-color: mix($kofi-default-color, white, 90%);
+  }
+
+  &:active {
+    background-color: mix($kofi-default-color, black, 90%);
+  }
+}
+
+.popup {
+  $overlay-shadow: 0 0 5px rgba(0,0,0, 0.1);
+  $border-color: #ddd;
+
+  position: fixed;
+  z-index: 100;
+  // Prevent Sass from using its built-in `min` function
+  // https://github.com/sass/node-sass/issues/2815#issuecomment-575926329
+  width: calc(min(320px, 100%));
+  height: calc(min(580px, 95%));
+  bottom: 0;
+  right: 2em;
+  animation: open 1s forwards ease-in-out;
+  box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 1em 1em 0 0;
+    background-color: white;
+  }
+
+  .closeBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    border-color: $border-color;
+    border-width: 1px;
+    box-shadow: $overlay-shadow;
+    aspect-ratio: 1;
+    translate: 33% -33%;
+    border-radius: 100%;
+    line-height: 0;
+    
+    &:hover {
+      background-color: mix(white, black, 90%);
+    }
+
+    &:active {
+      background-color: mix(white, black, 80%);
+    }
+  }
+
+  .closeIcon {
+    color: gray;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .profileLink {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    border-top: 1px solid $border-color;
+    font-weight: 600;
+    box-shadow: $overlay-shadow;
+
+    a {
+      color: black;
+      text-shadow: none;
+      text-decoration: none;
+
+      &:hover {
+        color: $kofi-default-color;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    iframe {
+      border-radius: 0;
+    }
+
+    .closeBtn {
+      translate: initial;
+      margin: 0.5rem;
+    }
+  }
+}
