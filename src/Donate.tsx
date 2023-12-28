@@ -10,24 +10,25 @@ import { BsX as CloseIcon } from 'react-icons/bs'
 
 export interface StyleDefs<T> {
   /**
-   * Popup wrapper. By default, the popup is anchored to the bottom right of
-   * the viewport on desktop and full screen on mobile.
-   */
-  popup?: T
-  /**
-   * Donate button.
+   * Donate button – a <button> element.
    */
   donateBtn?: T
   /**
-   * Button to close the donate popup.
+   * Panel wrapper that popus up when donate button is clicked. By default,
+   * the panel is anchored to the bottom right of the viewport on desktop and
+   * full screen on mobile.
+   */
+  panel?: T
+  /**
+   * Button to close the donate panel.
    */
   closeBtn?: T
   /**
-   * (X) icon within the popup close button.
+   * (X) icon within the panel close button.
    */
   closeIcon?: T
   /**
-   * Link to your Ko-fi profile. By default, it's anchored to the bottom of the donate popup.
+   * Link to your Ko-fi profile. By default, it's anchored to the bottom of the donate panel.
    */
   profileLink?: T
 }
@@ -56,7 +57,7 @@ export interface DonateProps {
 }
 
 /**
- * Component to display a button that opens a Ko-fi donation popup when clicked.
+ * Component to display a button that opens a Ko-fi donation panel when clicked.
  *
  * @component
  * @example
@@ -90,8 +91,8 @@ export default function Donate({
       </button>
       {open ? 
         <div 
-          className={classes(s.popup, classNames.popup)}
-          style={styles.popup}
+          className={classes(s.panel, classNames.panel)}
+          style={styles.panel}
         >
           <button
             className={classes(s.closeBtn, classNames.closeBtn)}
