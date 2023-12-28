@@ -1,13 +1,13 @@
 {
-  "name": "react-kofi-overlay-widget",
-  "version": "1.0.0",
-  "description": "",
+  "name": "react-kofi-overlay",
+  "version": "0.1.0",
+  "description": "React component for accepting donations though Ko-fi without leaving your website",
   "main": "dist/bundle.js",
   "types": "dist/index.d.ts",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack && tsc"
+    "build": "webpack && tsc",
+    "example": "webpack --config ./examples/webpack.config.js && http-server ./examples"
   },
   "keywords": [],
   "author": "Harrison Liddiard",
