@@ -2,9 +2,9 @@
 
 [**Jump to usage**](#usage)
 
-React component for accepting donations though Ko-fi without leaving your website:
+A React component for accepting donations though Ko-fi without leaving your website:
 
-
+![react-kofi-overlay example](img/react-kofi-overlay_example.gif)
 
 ## Features
 
