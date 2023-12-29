@@ -4,7 +4,7 @@
 
 A React component for accepting donations though Ko-fi without leaving your website:
 
-![react-kofi-overlay example](img/react-kofi-overlay_example.gif)
+![react-kofi-overlay example](img/example.gif)
 
 ## Features
 
@@ -21,17 +21,17 @@ To set up what Ko-fi calls their "[Floating Button Donation Widget](https://ko-f
 
 This has some limitations:
 
-- It only allows you to choose from a handful of button calls-to-action, which may not meet your needs.
-- It provides a limited selection of background color choices, which may not match your website theme.
-- It requires you to load a `<script>` tag from their CDN, which creates a global variable, and you then need to call a method on that global to render the donate button. Few potential issues with that:
-  - Requires an extra network request on every page load.
-  - Doesn't work well with modern JS bundling + import/export systems like Webpack.
-  - Doesn't work well with a React component-based frontend.
+- Only a few choices for button CTA (call-to-action text)
+- Limited selection of background color choices
+- Requires you to load a `<script>` tag from their CDN, which creates a global variable, and you then need to call a method on that global to render the donate button. Few potential issues with that:
+  - Requires an extra network request on every page load
+  - Doesn't work well with modern JS bundling + import/export syntax
+  - Doesn't work well with a React component-based frontend
   - Doesn't play nice with web frameworks like Next.js. Next.js makes it difficult to inject an arbitrary script like `kofiWidgetOverlay.draw(...)` – and to only run that code after the external `overlay-widget.js` script is loaded.
 
 This component is designed to address those limitations.
 
-## Installation
+## Install
 
 ```bash
 npm install react-kofi-overlay
@@ -68,7 +68,7 @@ import { Donate } from 'react-kofi-overlay'
 | Prop | Required | Type | Description |
 | ------------- | ------------- | ------------- | ------------- |
 | (children) | required | ReactNode | Contents of the donation button. Can be plain text or any React nodes that are valid children of a `<button>` element. |
-| `username` | required | string | Ko-fi profile to display in the donation panel. Corresponds to the Ko-fi page at `ko-fi.com/<username>` |
+| `username` | required | string | Ko-fi profile to display in the donation panel. Corresponds to the page at `ko-fi.com/<username>` |
 | `classNames` | optional | object | Class names to apply to different parts of the component for styling. See [Styling](#styling) for more info. |
 | `styles` | optional | object | Inline styles to apply to different parts of the component for styling. See [Styling](#styling) for more info. |
 | `onToggle` | optional | function | Function to call when the donate panel is opened or closed. It receives one argument: a boolean `open` value that indicates if the panel was opened or closed. |
@@ -87,5 +87,16 @@ Note: While you could provide both `classNames` and `styles`, it isn't recommend
 | `closeIcon` | (X) icon within the panel close button. |
 | `profileLink` | Wrapper `<div>` around the link to your Ko-fi profile. By default, it's anchored to the bottom of the donate panel. |
 
+#### Visual reference
+
+![Styling reference diagram](img/styling_reference.png)
 
 ## Development
+
+For local development of this plugin:
+
+1. Clone the repository
+2. `npm install`
+
+To build: `npm run build`
+
