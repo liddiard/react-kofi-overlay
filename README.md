@@ -22,7 +22,7 @@ To set up what Ko-fi calls their "[Floating Button Donation Widget](https://ko-f
 This has some limitations:
 
 - Only a few choices for button CTA (call-to-action text)
-- Limited selection of background color choices
+- Limited selection of background colors
 - Requires you to load a `<script>` tag from their CDN, which creates a global variable, and you then need to call a method on that global to render the donate button. Few potential issues with that:
   - Requires an extra network request on every page load
   - Doesn't work well with modern JS bundling + import/export syntax
