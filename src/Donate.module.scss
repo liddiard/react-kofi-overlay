@@ -1,4 +1,4 @@
-$kofi-default-color: #29abe0;
+$default-color: #027CB1;
 
 @keyframes open {
   from {
@@ -13,18 +13,19 @@ $kofi-default-color: #29abe0;
 
 .donateBtn {
   display: inline-block;
-  background-color: $kofi-default-color;
+  background-color: $default-color;
   color: white;
+  border: 0;
   padding: 0.5em 1em;
   border-radius: 2em;
   font-weight: bold;
 
   &:hover {
-    background-color: mix($kofi-default-color, white, 90%);
+    background-color: mix($default-color, white, 90%);
   }
 
   &:active {
-    background-color: mix($kofi-default-color, black, 90%);
+    background-color: mix($default-color, black, 90%);
   }
 }
 
@@ -41,12 +42,12 @@ $kofi-default-color: #29abe0;
   bottom: 0;
   right: 2em;
   animation: open 1s forwards ease-in-out;
-  box-shadow: 0 0 10px rgba(0,0,0, 0.5);
 
   iframe {
     width: 100%;
     height: 100%;
     border: 0;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.5);
     border-radius: 1em 1em 0 0;
     background-color: white;
   }
@@ -56,8 +57,7 @@ $kofi-default-color: #29abe0;
     right: 0;
     top: 0;
     background-color: white;
-    border-color: $border-color;
-    border-width: 1px;
+    border: 1px solid $border-color;
     box-shadow: $overlay-shadow;
     aspect-ratio: 1;
     translate: 33% -33%;
@@ -83,7 +83,7 @@ $kofi-default-color: #29abe0;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    right: 0;
     background-color: white;
     text-align: center;
     padding: 0.75rem;
@@ -98,7 +98,7 @@ $kofi-default-color: #29abe0;
       text-decoration: none;
 
       &:hover {
-        color: $kofi-default-color;
+        color: $default-color;
       }
     }
   }
