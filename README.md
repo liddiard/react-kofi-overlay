@@ -63,6 +63,8 @@ import { Donate } from 'react-kofi-overlay'
 </Donate>
 ```
 
+**[Full example on CodePen](https://codepen.io/liddiard/pen/eYXNVXy)**
+
 ### Props
 
 | Prop | Required | Type | Description |
