@@ -65,12 +65,12 @@ import { Donate } from 'react-kofi-overlay'
 
 ### Props
 
-| Prop name | Required | Type | Description |
+| Prop | Required | Type | Description |
 | ------------- | ------------- | ------------- | ------------- |
-| `username` | required | string | Ko-fi profile to display in the donation panel. Corresponds to the Ko-fi page at ko-fi.com/<username> |
 | (children) | required | ReactNode | Contents of the donation button. Can be plain text or any React nodes that are valid children of a `<button>` element. |
-| `classNames` | optional | object | Class names to apply to different parts of the component for styling. See [Styling](#styling) below for more info. |
-| `styles` | optional | object | Inline styles to apply to different parts of the component for styling. See [Styling](#styling) below for more info. |
+| `username` | required | string | Ko-fi profile to display in the donation panel. Corresponds to the Ko-fi page at `ko-fi.com/<username>` |
+| `classNames` | optional | object | Class names to apply to different parts of the component for styling. See [Styling](#styling) for more info. |
+| `styles` | optional | object | Inline styles to apply to different parts of the component for styling. See [Styling](#styling) for more info. |
 | `onToggle` | optional | function | Function to call when the donate panel is opened or closed. It receives one argument: a boolean `open` value that indicates if the panel was opened or closed. |
 
 ### Styling
@@ -81,11 +81,11 @@ Note: While you could provide both `classNames` and `styles`, it isn't recommend
 
 | Name  | Description |
 | ------------- | ------------- |
-| `donateBtn` | Donate button – a <button> element. |
-| `panel` | Panel wrapper that popus up when donate button is clicked. By default, the panel is anchored to the bottom right of the viewport on desktop and full screen on mobile. |
-| `closeBtn` | Button to close the donate panel. |
+| `donateBtn` | Donate `<button>` element. |
+| `panel` | Wrapper `<div>` around panel that appears when donate button is clicked. By default, the panel is anchored to the bottom right of the viewport on desktop and full screen on mobile. |
+| `closeBtn` | `<button>` to close the donate panel. |
 | `closeIcon` | (X) icon within the panel close button. |
-| `profileLink` | Link to your Ko-fi profile. By default, it's anchored to the bottom of the donate panel. |
+| `profileLink` | Wrapper `<div>` around the link to your Ko-fi profile. By default, it's anchored to the bottom of the donate panel. |
 
 
 ## Development
