@@ -2,7 +2,7 @@
 
 [**Jump to usage**](#usage)
 
-A React component for accepting donations though Ko-fi without leaving your website:
+A React component for accepting donations though [Ko-fi](https://ko-fi.com/) without leaving your website:
 
 ![react-kofi-overlay example](img/example.gif)
 
@@ -102,3 +102,6 @@ For local development of this plugin:
 
 To build: `npm run build`
 
+## Disclaimer
+
+This project is not endorsed by or affiliated with Ko-fi Labs, the company behind [Ko-fi](https://ko-fi.com/).
