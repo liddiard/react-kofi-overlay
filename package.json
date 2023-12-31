@@ -1,6 +1,6 @@
 {
   "name": "react-kofi-overlay",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React component for accepting donations though Ko-fi without leaving your website",
   "main": "dist/bundle.js",
   "types": "dist/index.d.ts",
