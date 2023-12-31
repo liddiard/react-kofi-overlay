@@ -70,7 +70,7 @@ import { Donate } from 'react-kofi-overlay'
 | Prop | Required | Type | Description |
 | ------------- | ------------- | ------------- | ------------- |
 | (children) | required | ReactNode | Contents of the donation button. Can be plain text or any React nodes that are valid children of a `<button>` element. |
-| `username` | required | string | Ko-fi profile to display in the donation panel. Corresponds to the page at `ko-fi.com/<username>` |
+| `username` | required | string | Ko-fi profile to display in the donation panel. Corresponds to the page at `ko-fi.com/<username>`. |
 | `classNames` | optional | object | Class names to apply to different parts of the component for styling. See [Styling](#styling) for more info. |
 | `styles` | optional | object | Inline styles to apply to different parts of the component for styling. See [Styling](#styling) for more info. |
 | `onToggle` | optional | function | Function to call when the donate panel is opened or closed. It receives one argument: a boolean `open` value that indicates if the panel was opened or closed. |
