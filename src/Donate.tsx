@@ -85,7 +85,7 @@ export default function Donate({
       <button 
         className={classes(s.donateBtn, classNames.donateBtn)}
         style={styles.donateBtn}
-        onClick={() => handleOpen(true)}
+        onClick={() => handleOpen(!open)}
       >
         {children}
       </button>
