@@ -1,4 +1,5 @@
-$default-color: #027CB1;
+@use "sass:color";
+$default-color: #027cb1;
 
 @keyframes open {
   from {
@@ -21,16 +22,16 @@ $default-color: #027CB1;
   font-weight: bold;
 
   &:hover {
-    background-color: mix($default-color, white, 90%);
+    background-color: color.mix($default-color, white, 90%);
   }
 
   &:active {
-    background-color: mix($default-color, black, 90%);
+    background-color: color.mix($default-color, black, 90%);
   }
 }
 
 .panel {
-  $overlay-shadow: 0 0 5px rgba(0,0,0, 0.1);
+  $overlay-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   $border-color: #ddd;
 
   position: fixed;
@@ -47,7 +48,7 @@ $default-color: #027CB1;
     width: 100%;
     height: 100%;
     border: 0;
-    box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 1em 1em 0 0;
     background-color: white;
   }
@@ -64,13 +65,13 @@ $default-color: #027CB1;
     border-radius: 100%;
     line-height: 0;
     padding: 0.4rem;
-    
+
     &:hover {
-      background-color: mix(white, black, 90%);
+      background-color: color.mix(white, black, 90%);
     }
 
     &:active {
-      background-color: mix(white, black, 80%);
+      background-color: color.mix(white, black, 80%);
     }
   }
 
