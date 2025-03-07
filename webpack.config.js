@@ -23,12 +23,14 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
-          'style-loader',
-          // Translates CSS into CommonJS
-          'css-loader',
-          // Compiles Sass to CSS
-          'sass-loader',
+          'style-loader', // Injects styles into DOM
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true, // Enables CSS Modules and exports class names as JS objects
+            },
+          },
+          'sass-loader', // Compiles Sass to CSS
         ],
       },
     ],

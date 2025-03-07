@@ -1,6 +1,6 @@
 {
   "name": "react-kofi-overlay",
-  "version": "1.0.2",
+  "version": "2.0.0-alpha.4",
   "description": "React component for accepting donations though Ko-fi without leaving your website",
   "main": "dist/bundle.js",
   "types": "dist/index.d.ts",
@@ -13,8 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.5.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "react-icons": "^5.4.0"
   },
   "peerDependencies": {
