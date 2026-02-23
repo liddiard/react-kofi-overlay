@@ -11,29 +11,33 @@
   "keywords": [],
   "author": "Harrison Liddiard",
   "license": "ISC",
+  "engines": {
+    "node": "24",
+    "npm": "11"
+  },
   "dependencies": {
     "classnames": "^2.5.1",
-    "react-icons": "^5.4.0"
+    "react-icons": "^5.5.0"
   },
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.26.3",
-    "@babel/preset-typescript": "^7.26.0",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
-    "babel-loader": "^9.2.1",
-    "css-loader": "^7.1.2",
-    "sass": "^1.83.0",
-    "sass-loader": "^16.0.4",
+    "@babel/core": "^7.29.0",
+    "@babel/preset-env": "^7.29.0",
+    "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.4",
+    "sass": "^1.97.3",
+    "sass-loader": "^16.0.7",
     "style-loader": "^4.0.0",
-    "terser-webpack-plugin": "^5.3.11",
-    "typescript": "^5.7.2",
-    "webpack": "^5.97.1",
+    "terser-webpack-plugin": "^5.3.16",
+    "typescript": "^5.9.3",
+    "webpack": "^5.105.2",
     "webpack-cli": "^6.0.1"
   }
 }
