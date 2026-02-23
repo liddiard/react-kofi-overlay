@@ -7,7 +7,6 @@ import s from './Donate.module.scss'
 import { IconContext } from 'react-icons'
 import { BsX as CloseIcon } from 'react-icons/bs'
 
-
 export interface StyleDefs<T> {
   /**
    * Donate button – a <button> element.
@@ -50,7 +49,7 @@ export interface DonateProps {
    * Optional custom styles to apply to the component.
    */
   styles?: StyleDefs<CSSProperties>
-  /** 
+  /**
    * Optional function to be called when the donation form is opened or closed.
    */
   onToggle?: (open: boolean) => void
@@ -70,7 +69,7 @@ export default function Donate({
   username,
   classNames = {},
   styles = {},
-  onToggle = () => {}
+  onToggle = () => {},
 }: DonateProps) {
   const baseUrl = `https://ko-fi.com/${username}`
   const [open, setOpen] = useState(false)
@@ -82,15 +81,15 @@ export default function Donate({
 
   return (
     <>
-      <button 
+      <button
         className={classes(s.donateBtn, classNames.donateBtn)}
         style={styles.donateBtn}
         onClick={() => handleOpen(true)}
       >
         {children}
       </button>
-      {open ? 
-        <div 
+      {open ? (
+        <div
           className={classes(s.panel, classNames.panel)}
           style={styles.panel}
         >
@@ -99,10 +98,12 @@ export default function Donate({
             style={styles.closeBtn}
             onClick={() => handleOpen(false)}
           >
-            <IconContext.Provider value={{
-              className: classes(s.closeIcon, classNames.closeIcon),
-              style: styles.closeIcon
-            }}>
+            <IconContext.Provider
+              value={{
+                className: classes(s.closeIcon, classNames.closeIcon),
+                style: styles.closeIcon,
+              }}
+            >
               <CloseIcon title="Close" />
             </IconContext.Provider>
           </button>
@@ -116,7 +117,7 @@ export default function Donate({
             </a>
           </div>
         </div>
-      : null}
+      ) : null}
     </>
   )
 }
