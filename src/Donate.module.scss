@@ -39,7 +39,7 @@ $default-color: #027cb1;
   // Prevent Sass from using its built-in `min` function
   // https://github.com/sass/node-sass/issues/2815#issuecomment-575926329
   width: calc(min(320px, 100%));
-  height: calc(min(580px, 95%));
+  height: calc(min(585px, 95%));
   bottom: 0;
   right: 2em;
   animation: open 1s forwards ease-in-out;
